@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt #
 
 dataset = pd.read_csv("./data.csv")
 x = dataset.iloc[:,1:2].values
@@ -19,7 +19,6 @@ x_poly = PR.fit_transform(x) # changing x model to polynomial fit.transform
 LR2 = LinearRegression() # include fit with PolyReg into our linear regression model
 LR2.fit(x_poly, y) # LR2 is a linear regression model taken from the x_poly values
 
-
 """TO MAKE POYNOMIAL CURVE SMOOTHER"""
 
 # gives a rg from lower bound and uper bound then the increment -> vector
@@ -30,7 +29,6 @@ x_grid = x_grid.reshape(len(x_grid),1)
 # replace 'x' below with 'x_grid'
 
 """"""
-
 # visualizing the linear regression results and polynomial results
 # real values
 plt.scatter(x, y, color = "red")
